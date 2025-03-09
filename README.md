@@ -53,10 +53,27 @@ No installation needed! Simply visit:
 
 ---
 
-## 📝 How It Works  
-1️⃣ **Upload a Video** – Supports MP4, AVI, MOV, and more  
-2️⃣ **Process with AI** – Whisper model transcribes audio  
-3️⃣ **Download Subtitles** – Get your `.srt` file instantly  
+## How It Works
+
+### 1. Upload an Image
+- Users can upload an image in JPG, JPEG, or PNG format using the file uploader provided in the app interface.
+
+### 2. Image Processing
+- Once an image is uploaded, the application uses a pre-trained image captioning model to analyze the content of the image. The model employed in SnapCaption is the BLIP (Bootstrapping Language-Image Pre-training) model, which is capable of generating descriptive captions based on the visual content.
+
+### 3. Generate Caption
+- After the image is processed, users can click the "Generate Caption" button. The application will:
+  - Preprocess the uploaded image.
+  - Use the BLIP model to generate a caption without calculating gradients (to optimize performance).
+  - Decode the generated caption into a human-readable format.
+
+### 4. Display the Caption
+- The generated caption is displayed on the app interface. Additionally, the app provides a suggested status format that includes the caption along with relevant hashtags for social media sharing.
+
+## Features
+- **User -Friendly Interface**: Simple and intuitive design for easy navigation.
+- **AI-Powered Captions**: Leverages advanced AI models to generate creative and relevant captions.
+- **Social Media Integration**: Suggested captions are formatted for easy sharing on popular platforms.
 
 ---
 

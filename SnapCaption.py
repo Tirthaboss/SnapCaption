@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import requests
+import torch  # Import torch here
 from transformers import BlipProcessor, BlipForConditionalGeneration
 
 # Load the pre-trained model and processor
@@ -24,7 +25,7 @@ if uploaded_file is not None:
         inputs = processor(images=image, return_tensors="pt")
 
         # Generate caption
-        with torch.no_grad():
+        with torch.no_grad():  # This line will now work
             output = model.generate(**inputs)
 
         # Decode the generated caption

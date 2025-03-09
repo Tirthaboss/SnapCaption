@@ -13,12 +13,9 @@ SnapCaption is an AI-powered web app that automatically generates high-quality c
 ---
 
 ## 🎯 Features  
-✔️ **AI-Powered Transcription** – Converts speech to text using OpenAI Whisper  
-✔️ **Multilingual Support** – Captions videos in multiple languages  
-✔️ **Accurate Timestamps** – Generates properly synced subtitles  
-✔️ **SRT File Export** – Download captions in standard `.srt` format  
-✔️ **User-Friendly UI** – Minimalistic and intuitive interface  
-✔️ **Fast Processing** – Optimized for speed and efficiency  
+✔️User -Friendly Interface: Simple and intuitive design for easy navigation.
+✔️AI-Powered Captions: Leverages advanced AI models to generate creative and relevant captions.
+✔️Social Media Integration: Suggested captions are formatted for easy sharing on popular platforms.
 
 ---
 
@@ -69,11 +66,6 @@ No installation needed! Simply visit:
 
 ### 4. Display the Caption
 - The generated caption is displayed on the app interface. Additionally, the app provides a suggested status format that includes the caption along with relevant hashtags for social media sharing.
-
-## Features
-- **User -Friendly Interface**: Simple and intuitive design for easy navigation.
-- **AI-Powered Captions**: Leverages advanced AI models to generate creative and relevant captions.
-- **Social Media Integration**: Suggested captions are formatted for easy sharing on popular platforms.
 
 ---
 

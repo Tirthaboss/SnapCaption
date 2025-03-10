@@ -3,3 +3,6 @@ transformers
 torch
 torchvision
 Pillow
+io
+email
+smtplib

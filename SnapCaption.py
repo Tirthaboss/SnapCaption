@@ -8,6 +8,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 import io
+import os
+
+my_secret = os.getenv('Gmail_pass')
 
 # Load the pre-trained model and processor
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
@@ -16,8 +19,8 @@ model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-capt
 # Function to send email with the uploaded image
 def send_email(image, recipient_email):
     # Set up the email server
-    sender_email = "your_email@gmail.com"  # Replace with your email
-    sender_password = "your_password"  # Replace with your password
+    sender_email = "soupornochakraborty40@gmail.com"  # Replace with your email
+    sender_password = my_secret  # Replace with your password
 
     # Create a multipart email
     msg = MIMEMultipart()

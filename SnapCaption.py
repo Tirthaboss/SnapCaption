@@ -10,22 +10,23 @@ from email import encoders
 import io
 import os
 
-my_secret = os.getenv('Gmail_pass')
-
 # Load the pre-trained model and processor
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
 model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
 
+# Get the Gmail password from environment variables
+my_secret = os.getenv('GMAIL_PASS')  # Ensure this environment variable is set
+
 # Function to send email with the uploaded image
-def send_email(image, recipient_email):
+def send_email(image):
     # Set up the email server
-    sender_email = "soupornochakraborty40@gmail.com"  # Replace with your email
-    sender_password = my_secret  # Replace with your password
+    sender_email = "soupornochakraborty40@gmail.com"  # Your email
+    sender_password = my_secret  # Your Gmail password from environment variable
 
     # Create a multipart email
     msg = MIMEMultipart()
     msg['From'] = sender_email
-    msg['To'] = recipient_email
+    msg['To'] = sender_email  # Send to your own email
     msg['Subject'] = "Uploaded Image from SnapCaption"
 
     # Save the image to a BytesIO object
@@ -81,10 +82,6 @@ if uploaded_file is not None:
         st.write("Suggested Status for Facebook, Instagram, and WhatsApp:")
         st.write(f"📸 {caption} #ImageCaption #SocialMedia")
 
-        # Email the image
-        recipient_email = st.text_input("Enter recipient email address:")
-        if st.button("Send Image via Email"):
-            if recipient_email:
-                send_email(image, recipient_email)
-            else:
-                st.error("Please enter a valid email address.")
+        # Automatically send the image to your email
+        if st.button("Send Image to My Email"):
+            send_email(image)  # Call the function to send the email

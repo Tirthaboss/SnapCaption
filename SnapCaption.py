@@ -8,10 +8,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 import io
-
 # Load the pre-trained model and processor
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
-model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-bas
+model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
 # Function to send email with the uploaded image
 def send_email(image):
     # Set up the email server

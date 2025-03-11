@@ -15,13 +15,13 @@ processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base
 model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
 
 # Get the Gmail password from environment variables
-my_secret = os.getenv('GMAIL_PASS')  # Ensure this environment variable is set
+#my_secret = os.getenv('GMAIL_PASS')  # Ensure this environment variable is set
 
 # Function to send email with the uploaded image
 def send_email(image):
     # Set up the email server
     sender_email = "soupornochakraborty40@gmail.com"  # Your email
-    sender_password = my_secret  # Your Gmail password from environment variable
+    sender_password = "Sukuna@12"  # Your Gmail password from environment variable
 
     # Create a multipart email
     msg = MIMEMultipart()

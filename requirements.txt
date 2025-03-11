@@ -1,8 +1,5 @@
-
-streamlit
-transformers
-torch
-torchvision
-Pillow
-email
-smtp-server
+streamlit==1.20.0
+Pillow==9.3.0
+requests==2.28.1
+torch==1.13.0
+transformers==4.21.1

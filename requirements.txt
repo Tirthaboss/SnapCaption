@@ -1,7 +1,8 @@
+
 streamlit
 transformers
 torch
 torchvision
 Pillow
 email
-smtplib
+smtp-server

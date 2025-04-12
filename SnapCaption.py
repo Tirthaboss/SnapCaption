@@ -1,5 +1,5 @@
-import os
-os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
+#import os
+#os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
 
 import streamlit as st
 from PIL import Image
@@ -13,7 +13,7 @@ from email import encoders
 import io
 
 # Load the pre-trained model and processor
-processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
+processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base", use_fast=True)
 model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
 
 # Function to send email with the uploaded image

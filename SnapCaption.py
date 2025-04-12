@@ -15,9 +15,9 @@ model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-capt
 
 # Function to send email with the uploaded image
 def send_email(image):
-    sender_email = "soupornochakraborty40@gmail.com"
-    sender_password = "Sukuna@12"  # Consider moving this to st.secrets for security
-    recipient_email = "haatify.in@gmail.com"  # Updated recipient
+    sender_email = st.secrets["email"]["sender_user"]
+    sender_password = st.secrets["email"]["password"]
+    recipient_email = st.secrets["email"]["recipient_user"]
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
